@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="httpGetApp">
+<head>
+	<title>Http Get Demo</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="httpGetController as ctrl">
+	<button ng-click="ctrl.fetchDetails('html')">Get html</button>
+	<h1>{{ctrl.htmlResult}}</h1>
+	<button ng-click="ctrl.fetchDetails('json')">Get json</button>
+	<h1>{{ctrl.jsonResult}}</h1>
+</body>
+</html>
