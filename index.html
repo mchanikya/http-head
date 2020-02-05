@@ -10,5 +10,19 @@
 	<h1>{{ctrl.htmlResult}}</h1>
 	<button ng-click="ctrl.fetchDetails('json')">Get json</button>
 	<h1>{{ctrl.jsonResult}}</h1>
+	<button ng-click="ctrl.sendDetails('PUT')">put Data</button>
+	<h1>{{ctrl.PutStatus}}</h1>
+	<button ng-click="ctrl.sendDetails('POST')">Post Data</button>
+	<h1>{{ctrl.PostStatus}}</h1>
+
+	<div>
+		<form novalidate>
+			<input type="text" name="name" ng-model='ctrl.name' placeholder="name">
+			<input type="email" name="name" ng-model='ctrl.email' placeholder="email">
+			<input type="password" name="password" ng-model='ctrl.password' placeholder="pasword">
+			<button ng-click='ctrl.createAccount(ctrl.name,ctrl.email,ctrl.password)'> Create Account</button>
+		</form>
+		<p>{{ctrl.accountStatus}}</p>
+	</div>
 </body>
 </html>
